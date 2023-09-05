@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+
+    img 
+    {
+        max-width: 100%;
+        height: auto;
+    }
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+      width: 80%;
+      max-width: 800px;
+      text-align: left;
+    }
+
+    h1, h2, h3 {
+      color: #333;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: 20px 0;
+      width: 100%;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    form {
+      margin: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width:600px;
+      text-align: left;
+    }
+
+    label {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"], input[type="email"], input[type="number"] {
+      font-size: 16px;
+      padding: 10px;
+      margin: 5px 0;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #00bcd4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header">
+    <h1>Welcome to Our New Design</h1>
+  </div>
+
+  <div id="content">
+    <h2>reponsive web Design</h2>
+    <h3> New Design </h3>
+
+    <img src="mann.png" width="400" height="400" alt="Mann Image">
+
+    <table>
+      <tr>
+        <th>zoo</th>
+        <th>animals</th>
+        <th>tickets</th>
+      </tr>
+      <tr>
+        <td>10p</td>
+        <td>50p</td>
+        <td>100p</td>
+      </tr>
+      <tr>
+        <td>50p</td>
+        <td>75p</td>
+        <td>null</td>
+      </tr>
+    </table>
+    <h2>details of ticket holder</h2>
+
+    <form action="action_page.php">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+
+</html>

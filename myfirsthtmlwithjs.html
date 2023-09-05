@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Concepts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            background-color: #00bcd4;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h2 {
+            color: #555;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        button {
+            background-color: #00bcd4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0097a7;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Concepts in HTML</h1>
+    <h2>String Methods:</h2>
+    <p id="stringMethods"></p>
+
+    <h2>Number Methods:</h2>
+    <p id="numberMethods"></p>
+
+    <h2>Array Methods:</h2>
+    <p id="arrayMethods"></p>
+
+    <h2>Date Methods:</h2>
+    <p id="dateMethods"></p>
+
+    <h2>Function Methods:</h2>
+    <p id="functionMethods"></p>
+
+    <button id="alertButton">
+        Alert Function
+    </button>
+    
+    <script>
+         // String Methods
+         const originalString = "Hello, World!";
+        const stringMethodsOutput = `Original String: "${originalString}"<br>
+            Length: ${originalString.length}<br>
+            Uppercase: ${originalString.toUpperCase()}<br>
+            Lowercase: ${originalString.toLowerCase()}<br>
+            Substring(0, 5): ${originalString.substring(0, 5)}<br>`;
+        document.getElementById("stringMethods").innerHTML = stringMethodsOutput;
+
+        // Number Methods
+        const number = 42.456;
+        const numberMethodsOutput = `Original Number: ${number}<br>
+            Fixed (2 decimal places): ${number.toFixed(2)}<br>
+            Rounded: ${Math.round(number)}<br>
+            Square Root: ${Math.sqrt(number)}<br>
+            Random Number (0-1): ${Math.random()}<br>`;
+        document.getElementById("numberMethods").innerHTML = numberMethodsOutput;
+
+        // Array Methods
+        const colors = ["red", "green", "blue"];
+        colors.push("yellow");
+        colors.pop();
+        const arrayMethodsOutput = `Original Array: ${colors.join(", ")}<br>
+            Pushed "yellow", Popped<br>`;
+        document.getElementById("arrayMethods").innerHTML = arrayMethodsOutput;
+
+        // Date Methods
+        const currentDate = new Date();
+        const dateMethodsOutput = `Current Date: ${currentDate}<br>
+            Date: ${currentDate.getDate()}<br>
+            Month: ${currentDate.getMonth()}<br>
+            Year: ${currentDate.getFullYear()}<br>
+            Hours: ${currentDate.getHours()}<br>`;
+        document.getElementById("dateMethods").innerHTML = dateMethodsOutput;
+
+        // Function Methods
+        function greet(name) {
+            return `Hello, ${name}!`;
+        }
+
+        const functionMethodsOutput = `Function Result: ${greet("John")}<br>
+            Function Name: ${greet.name || "Not available in this environment"}<br>`;
+        document.getElementById("functionMethods").innerHTML = functionMethodsOutput;
+
+        // Button Click Event
+        const button = document.getElementById("alertButton");
+        button.onclick = () => {
+            alert("Button is clicked!");
+            promptValue();
+        }
+
+        // HTML Click Event
+        document.querySelector("html").addEventListener("click", function() {
+            alert("HTML area is clicked!");
+        })
+
+        // Prompt Function
+        function promptValue(){
+            const name = prompt("Please enter your name!");
+            document.getElementById("functionMethods").innerHTML = `You entered: ${name}`;
+        }
+    </script>
+</body>
+</html>
